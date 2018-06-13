@@ -1,38 +1,37 @@
-
-## Animal is-a object (yes, sort of confusing) look at the extra credit 
+## Animal is-a object (yes, sort of confusing) look at the ex
 class Animal(object):
     pass
 
 ## ??
 class Dog(Animal):
 
-    def _init_(self, name):
+    def __init__(self, name):
         ## ??
         self.name = name
 
-## ?? 
+## ??
 class Cat(Animal):
 
-    def _init_(self, name):
+    def __init__(self, name):
         ## ??
         self.name = name
 
 ## ??
 class Person(object):
 
-    def _init_(self, name):
+    def __init__(self, name):
         ## ??
         self.name = name
 
-        ## Person has-a pet some kind
+        ## Person has-a pet of some kind
         self.pet = None
 
 ## ??
 class Employee(Person):
 
-    def _init_(self, name, salary):
+    def __init__(self, name, salary):
         ## ?? hmm what is this strange magic?
-        super(Employee, self)._init_(name)
+        super(Employee, self).__init__(name)
         ## ??
         self.salary = salary
 
@@ -47,7 +46,6 @@ class Salmon(Fish):
 ## ??
 class Halibut(Fish):
     pass
-
 
 ## rover is-a Dog
 rover = Dog("Rover")
@@ -74,4 +72,4 @@ flipper = Fish()
 crouse = Salmon()
 
 ## ??
-hary = Halibut()
+harry = Halibut()
